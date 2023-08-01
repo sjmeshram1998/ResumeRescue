@@ -1,0 +1,85 @@
+.hero-head {
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 69px;
+    text-transform: uppercase;
+    color: #000000;
+}
+.hero-head span {
+    color: #1CA7AB;
+    font-weight: 700;
+}
+.hero-para {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    color: #515151;
+}
+.get-started-btn {
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-color: #1CA7AB;
+    width: 178px;
+    font-weight: 500;
+}
+.signup-btn {
+    background-color: #1CA7AB;
+    color: white;
+    padding: 0.5rem;
+}
+.signup-form {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0.375rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.frm {
+    background: linear-gradient(180deg, rgba(239, 239, 239, 0.1) 0%, rgba(28, 167, 171, 0.6) 100%);
+    backdrop-filter: blur(25px);
+    border-radius: 10px;
+    padding: 3rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+.pd {
+    padding: 2rem;
+}
+@media screen and (max-width: 320px) {
+    .hero-head {
+        font-size: 25px;
+        line-height: 40px;
+   }
+}
+@media screen and (min-width:321px) and (max-width: 480px) {
+    .hero-head {
+        font-size: 40px;
+   }
+}
+@media screen and (max-width: 1200px) {
+    .pd {
+        padding: 0rem;
+   }
+    .frm {
+        padding: 3rem;
+        margin-left: 0rem;
+        margin-right: 0rem;
+   }
+}
+.chat-img {
+    position: sticky;
+}
+.chat-img-parent {
+    position: relative;
+}

@@ -1,0 +1,48 @@
+<div class="container-fluid mt">
+    <div class="container">
+        <div class="row">
+            <div class="row mt-5">
+               <div class="col-md-9">
+                <p class="form-header">PROFESSIONAL SUMMARY</p>
+               </div>
+               <div class="col-md-3" align="right">
+                <p><i class="fa fa-light fa-eye mx-1 yellow-icon"></i> Preview</p>
+               </div>
+               <p class="professional-para">Write a short summary telling more about yourself, your strengths and experience. Feel free to use 
+                our pre-written examples</p>
+              </div>
+              <form class="row g-3" [formGroup]="summaryForm" (ngSubmit)="onSubmitOfSummaryForm()">
+                <div class="row mb-3">
+                    <textarea class="form-control textarea-style" rows="10" formControlName="summary" name="summary" id="summary"></textarea>
+                    <span class="text-danger" *ngIf="summary && summary.invalid && summary.touched"> 
+                      summary required</span>
+                </div> 
+                <div class="row">
+                  <div class="col-md-6">
+                    <p class="form-header">Hobbies & Interest</p><br>
+                  </div>
+                  <div class="col-md-6" align="right">
+                    <p><i class="fa fa-light fa-eye mx-1 yellow-icon"></i> Preview</p><br>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <select class="form-select"  formControlName="interest" name="interest" id="interest">
+                      <option selected></option>
+                      <option value="TRAVEL">TRAVEL</option>
+                      <option value="CYCLING">CYCLING</option>
+                      <option value="GAMING">GAMING</option>
+                      <option value="BASKETBALL">BASKETBALL</option>
+                      <option value="PHOTOGRAPHY">PHOTOGRAPHY</option>
+                    </select>
+                    <span class="text-danger" *ngIf="interest && interest.invalid && interest.touched"> 
+                      interest required</span>
+                  </div>
+                  <div class="text-center mt-2 mb-5">
+                    <br><br>
+                    <button class="form-buttons mx-3" (click)="goToSkills()">BACK</button>
+                    <button class="form-buttons mx-3">NEXT</button>
+                </div>
+              </form>
+        </div>
+    </div>
+</div>

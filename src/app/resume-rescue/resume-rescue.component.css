@@ -1,0 +1,30 @@
+.para {
+    font-family: 'Raleway';
+    font-style: normal;
+    /* font-weight: 400; */
+    font-size: 20px;
+    line-height: 30px;
+    
+color: #FFFFFF;
+
+}
+.rescue-bg {
+background-color: #515151;
+padding-top: 4rem;
+padding-bottom: 4rem;
+}
+h1 {
+    color: #FFFFFF;
+
+}
+.rescue-btn {
+    background-color: #2ac6c6;
+    color: #FFFFFF;
+    font-family: 'Raleway';
+font-style: normal;
+/* font-weight: 400; */
+font-size: 20px;
+/* width: 228px; */
+text-transform: uppercase;
+
+}

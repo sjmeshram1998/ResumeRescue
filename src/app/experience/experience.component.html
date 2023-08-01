@@ -1,0 +1,72 @@
+<div class="container-fluid mt">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-1"></div>
+         <div class="col-md-10">
+            <div class="row mt-5">
+               <div class="col-md-9">
+                  <p class="form-header">Tell us about your most recent job</p>
+               </div>
+               <div class="col-md-3" align="right">
+                  <p><i class="fa fa-light fa-eye mx-1 yellow-icon"></i> Preview</p>
+               </div>
+            </div>
+            <form class="row g-3" [formGroup]="experienceInfoForm" (ngSubmit)="onSubmitExperienceInfoForm()"  id="experienceInfoForm">
+                  <div class="row">
+                     <div class="col-md-6">
+                        <label for="job_title" class="form-label">Job Title</label>
+                        <input type="text" class="form-control" formControlName="job_title" id="job_title">
+                        <span class="text-danger" *ngIf="job_title && job_title.invalid && job_title.touched"> 
+                           Job Title Required </span>
+                     </div>
+                     <div class="col-md-6">
+                        <label for="employer" class="form-label">Employer</label>
+                        <input type="text" class="form-control" formControlName="employer" id="employer">
+                        <span class="text-danger" *ngIf="employer && employer.invalid && employer.touched"> Employer Required </span>
+                     </div>
+                     <div class="col-md-6">
+                        <label for="city" class="form-label">City</label>
+                        <select class="form-select" formControlName="city" id="city">
+                           <option selected></option>
+                           <option>Amravati</option>
+                           <option>Pune</option>
+                           <option>Mumbai</option>
+                        </select>
+                        <span class="text-danger" *ngIf="city && city.invalid && city.touched"> City Required</span>
+                     </div>
+                     <div class="col-md-6">
+                        <label for="country" class="form-label">Country</label>
+                        <select class="form-select" formControlName="country" id="country">
+                           <option selected></option>
+                           <option>India</option>
+                           <option>Australia</option>
+                           <option>Newzealand</option>
+                        </select>
+                        <span class="text-danger" *ngIf="country && country.invalid && country.touched"> Country Required</span>
+                     </div>
+                     <div class="col-md-6">
+                        <label for="emp_start_date" class="form-label">Start Date</label>
+                        <input type="date" class="form-control" formControlName="emp_start_date" id="emp_start_date">
+                        <span class="text-danger" *ngIf="emp_start_date && emp_start_date.invalid && emp_start_date.touched"> Empployee Start Date Required</span>
+                     </div>
+                     <div class="col-md-6">
+                        <label for="emp_end_date" class="form-label">End Date</label>
+                        <input type="date" class="form-control" formControlName="emp_end_date" id="emp_end_date" [max]="maxDate">
+                        <span class="text-danger" *ngIf="emp_end_date && emp_end_date.invalid && emp_end_date.touched" > Empployee End Date Required </span>
+                     </div>
+                  </div>
+               <br><br>
+               <div class="col-md-6 form-check">
+                  <input type="checkbox" class="form-check-input">
+                  <label class="form-check-label">I currently work here</label>
+               </div>
+               <div class="text-center mt-5 mb-5">
+                  <button class="form-buttons mx-3" (click)="goToPersonalDetails()">BACK</button>
+                  <button class="form-buttons mx-3">NEXT</button>
+               </div>
+            </form>
+         </div>
+         <div class="col-md-1"></div>
+      </div>
+   </div>
+</div>

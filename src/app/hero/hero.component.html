@@ -1,0 +1,148 @@
+<div class="container mt">
+   <div class="row">
+      <div class="col-md-6">
+         <div class="br">
+            <p class="hero-head">Create <br>
+               <span class="hero-head">professional
+               resume</span>
+            </p>
+         </div>
+         <div class="hero-para">
+            <p>Use professional field-tested resume templates that 
+               follow the exact ‘resume rules’ employers look for. 
+               Easy to use and done within minutes - 
+               try now!
+            </p>
+         </div>
+         <div>
+            <button class="btn get-started-btn" routerLink="/choose-template">GET STARTED </button>
+         </div>
+      </div>
+      <div class="mx-auto col-10 col-md-8 col-lg-6 col-md-5 ">
+         <div class="pd mt-3" *ngIf="!authenticated">
+            <form class="form frm" [formGroup]="RegisterForm" (ngSubmit)="onSubmissionOfRegisterForm()" *ngIf="showRegisterForm"> 
+            <h1 class="form-header text-center">Create new account</h1>
+            <br>
+            <div class="row">
+               <div align="right" class="col-md-6">
+                  <img src="./assets/google.png" alt="google">
+               </div>
+               <div class="col-md-6">
+                  <img src="./assets/linkedin.png" alt="linkedin">
+               </div>
+            </div>
+            <div class="mt-3">
+               <p class="text-center">Or signup with email</p>
+            </div>
+            <div class="col-md-12">
+               <label >Email</label>
+               <input type="text" class="signup-form" formControlName="email" >
+               <!-- <span class="text-danger" *ngIf="email && email.invalid && email.touched"> 
+                  Email Address Required and Match The Pattern </span>  -->
+            </div>
+            <div class="col-md-12">
+               <label>Password</label>
+               <input type="password" class="signup-form" formControlName="password">
+               <!-- <span class="text-danger" *ngIf="password && password.invalid && password.touched"> 
+                  Password Required and Match The Pattern </span>  -->
+            </div>
+            <div class="col-md-12 mt-3 d-grid gap-2">
+               <button type="submit" class="btn signup-btn" >SIGN UP</button>
+               <a class="text-center text-white" style="text-decoration: none;" (click)="toggleForm()">Already have an account? Login</a>
+            </div>
+            </form>
+            <form class="form frm" [formGroup]="loginForm" (ngSubmit)="onSubmitOfLoginForm()"
+            *ngIf="!showRegisterForm"> 
+            <h1 class="form-header text-center">Create new account</h1>
+            <br>
+            <div class="row">
+               <div align="right" class="col-md-6">
+                  <img src="./assets/google.png" alt="google">
+               </div>
+               <div class="col-md-6">
+                  <img src="./assets/linkedin.png" alt="linkedin">
+               </div>
+            </div>
+            <div class="mt-3">
+               <p class="text-center">Or signup with email</p>
+            </div>
+            <div class="col-md-12">
+               <label for="uname">Email</label>
+               <input type="text" class="signup-form" formControlName="uname" name="uname" id="uname">
+            </div>
+            <div class="col-md-12">
+               <label for="pwd">Password</label>
+               <input type="password" class="signup-form" formControlName="pwd" name="pwd" id="pwd">
+            </div>
+            <div class="col-md-12 mt-3 d-grid gap-2">
+               <button type="submit" class="btn signup-btn" >Login</button>
+               <a class="text-center text-white " style="text-decoration: none;" (click)="toggleForm()">Create an account? Register</a>
+            </div>
+            </form>
+         </div>
+         <div *ngIf="authenticated">
+            <img src="./assets/user.png" alt="user-image" class="img-fluid mt-5 img-border" >
+         </div>
+      </div>
+
+      </div>
+   <div align="right" class="sticky-button"> 
+      <button type="button" class="btn" data-toggle="modal" data-target="#myModal" (click)="showModel=true"><img src="./assets/msg.png" alt="msg">
+      </button>
+   </div>
+
+   <!-- Modal -->
+
+</div>
+   <div id="myModal" class="modal fade " role="dialog" [ngClass]="{'show':showModel}">
+      <div class="modal-dialog modal-dialog modal-dialog-centered">
+    
+        <!-- Modal content-->
+        <div class="modal-content">
+         <div class="modal-header bg-color">
+           <button type="button" class="close" (click)="showModel=false" data-dismiss="modal">&times;</button>
+           <div class="text-white">
+             <h4 class="modal-title">NOW CHATTING</h4>
+             <p>Questions? We'd love to chat</p>
+           </div>
+         </div>
+         <form>
+           <div class="modal-body">
+             <div class="form-group">
+               <textarea class="form-control" rows="2" placeholder="Type here"></textarea>
+             </div>
+           </div>
+           <div class="modal-footer">
+             <button type="submit" class="btn">
+               <img src="./assets/chat.png" alt="">
+             </button>
+             <!-- <button type="button" class="btn btn-default" (click)="showModel=false" data-dismiss="modal">Close</button> -->
+           </div>
+         </form>
+       </div>
+       
+        <!-- <div class="modal-content">
+          <div class="modal-header bg-color">
+            <button type="button" class="close" (click)="showModel=false" data-dismiss="modal">&times;</button>
+            <div class="text-white">
+               <h4 class="modal-title">NOW CHATTING</h4>
+            <p>Questions? we'd love to chat</p>
+            </div>
+          </div>
+            <form>
+                  <div class="row">
+                     <div class="col-md-10">
+                        <textarea  rows="2" cols="65" placeholder="type here">
+                          </textarea>
+                     </div> 
+                     <div class="col-md-2 mt-2">
+                        <button type="submit"><img src="./assets/chat.png" alt=""></button>
+   
+                     </div>      
+                  </div>        
+            </form>
+          
+        </div> -->
+    
+      </div>
+    </div>

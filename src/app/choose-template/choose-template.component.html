@@ -1,0 +1,27 @@
+<div class="container-fluid mt choose-temp-bg">
+    <div class="container">
+      <div class="row">
+        <h1>ProgressBar</h1>
+      </div>
+      <div class="row mt-2 mb-2">
+        <p class="choose-temp-head text-center">Choose your <span>resume template</span>
+        </p>
+        
+      </div>
+      <div class="row mb-4">
+        <div class="col-md" *ngFor="let temp of templates;">
+          <div class="text-center select-temp">
+            <div class="tempDiv img-fluid">
+              <img src="{{temp.templateURL}}" alt="templates" class="mt-2 mb-5">
+            </div>
+            <div class="btnDiv">
+              <button type="button" class="form-buttons hover-btton" routerLink="/build-resume">{{temp.btnName}}</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <button type="button" class="btn">Load More....</button>
+      </div><br><br>
+    </div>
+</div>

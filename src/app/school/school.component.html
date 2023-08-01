@@ -1,0 +1,64 @@
+<div class="container-fluid mt">
+  <div class="container">
+     <div class="row mt">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+           <br>
+           <div class="row">
+              <div class="col-md-10">
+                 <p class="form-header">Tell us about your most recent job</p>
+                 <br>
+              </div>
+              <div class="col-md-2" align="right">
+                 <p><i class="fa fa-light fa-eye mx-1 yellow-icon"></i> Preview</p>
+                 <br>
+              </div>
+           </div>
+           <form class="row g-3" [formGroup]="schoolInfoForm" (ngSubmit)="onSubmitOfSchoolInfo()">
+                 <div class="row">
+                    <div class="col-md-6">
+                       <label for="school" class="form-label">School Name</label>
+                       <input type="text" class="form-control" formControlName="schoolName">
+                       <span class="text-danger" *ngIf="schoolName && schoolName.invalid && schoolName.touched">School Name must be 6 digits </span>
+                    </div>
+                    <div class="col-md-6">
+                       <label for="school_location" class="form-label">School Location</label>
+                       <input type="text" class="form-control" formControlName="schoolLocation">
+                       <span class="text-danger" *ngIf="schoolLocation && schoolLocation.invalid && schoolLocation.touched"> School Name must be 6 digits </span>
+                    </div>
+                    <div class="col-md-6">
+                       <label for="degree" class="form-label">Degree</label>
+                       <select class="form-select" formControlName="degree">
+                          <option selected></option>
+                          <option value="BE">BE</option>
+                          <option value="BA">BA</option>
+                          <option value="BCA">BCA</option>
+                       </select>
+                       <span class="text-danger" *ngIf="degree && degree.invalid && degree.touched"> Degree Required</span>
+                    </div>
+                    <div class="col-md-6">
+                       <label for="field" class="form-label">Field of Study</label>
+                       <input type="text" class="form-control" formControlName="field">
+                       <span class="text-danger" *ngIf="field && field.invalid && field.touched"> Field Required</span>
+                    </div>
+                    <div class="col-md-6">
+                       <label for="graduation_start_date" class="form-label">Graduation Start Date</label>
+                       <input type="date" class="form-control" formControlName="educationStartDate"> 
+                       <span class="text-danger" *ngIf="educationStartDate && educationStartDate.invalid && educationStartDate.touched">Education Start Date Required</span>
+                    </div>
+                    <div class="col-md-6">
+                       <label for="graduation_end_date" class="form-label">Graduation End Date</label>
+                       <input type="date" class="form-control" formControlName="educationEndDate" (click)="validateDate()" [max]="maxDate">
+                       <span class="text-danger" *ngIf="educationEndDate && educationEndDate.invalid && educationEndDate.touched"> Education End Date Required</span>
+                    </div>
+                 </div>           
+              <div class="text-center mt-5 mb-5">
+                 <button class="form-buttons mx-3" (click)="goToSchool()">BACK</button>
+                 <button class="form-buttons mx-3">NEXT</button>
+              </div>
+           </form>
+        </div>
+        <div class="col-md-1"></div>
+     </div>
+  </div>
+</div>

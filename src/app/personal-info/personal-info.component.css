@@ -1,0 +1,10 @@
+.profile-upload > input
+{
+    display: none;
+}
+
+.profile-upload img
+{
+    width: 30px;
+    cursor: pointer;
+}

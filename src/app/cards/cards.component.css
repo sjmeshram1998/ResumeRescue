@@ -1,0 +1,88 @@
+.heading {
+    text-transform: uppercase;
+    color: white;
+}
+/* component bg  starts*/
+.card-works {
+    background: #1CA7AB;
+}
+/* component bg ends*/
+.card {
+    border: 2px solid white;
+    padding: 2rem;
+    background-color: #1CA7AB;
+    width: 97%;
+    height: 75%;
+    border-radius: 15px;
+    margin: 0.5rem;
+}
+.content {
+    visibility: hidden;
+}
+.imgDIV {
+    padding-top: 10rem;
+}
+.card:hover>.content {
+    visibility: visible;
+}
+
+.card:hover>.imgDIV {
+    padding-top: 0rem;
+
+}
+
+.card:hover {
+    background-color: white;
+}
+.card-icon-color {
+    color: white;
+    font-size: 50px;
+
+}
+.card-heading-color {
+    color: white;
+}
+.para {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 30px;
+}
+.card:hover .card-icon-color {
+color: #FEDE29;
+}
+.card:hover .card-heading-color {
+    color: #1CA7AB;
+}
+.felx-card {
+    display: flex;
+    flex-direction: row; 
+    /* justify-content:space-evenly; */
+}
+/* @media screen and (max-width: 768px) {
+    .card {
+        border: 2px solid white;
+        padding: 2rem;
+        background-color: #1CA7AB;
+        width: 97%;
+        height: 100%;
+        border-radius: 15px;
+
+    }
+} */
+@media screen and (max-width: 992px) {
+    .card {
+        border: 2px solid white;
+        padding: 2rem;
+        background-color: #1CA7AB;
+        width: 97%;
+        height: 85%;
+        border-radius: 15px;
+
+    }
+    .felx-card {
+        display: flex;
+        flex-direction: column;
+    }
+}

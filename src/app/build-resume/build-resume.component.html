@@ -1,0 +1,64 @@
+<div class="container-fluid mt">
+    <div class="container">
+        <div class="row bg">
+            <p class="temp-sub-head text-center">HOW WOULD YOU LIKE TO </p>
+            <p class="temp-sub-head text-center sky-color">BUILD YOUR RESUME?</p>
+        </div>
+
+    <form (ngSubmit)="onSubmitBuildResumeForm()" [formGroup]="buildResumeForm" >
+        <div class="row ">
+            <div class="col-md-6 text-center mt-5 mb-5 border-bg">
+                <div class="div-border image-create">
+                    <label for="file-create">
+                        <img src="./assets/create.png" class="py-2"  alt="">
+                    </label>
+                    <input type="file" id="file-create" formControlName="create"><br>
+
+                    <!-- <i class="fa-regular fa-pen-to-square fa-2xl mb-4"></i> -->
+                    <h1 class="create-resume">Create new resume</h1>
+                    <p>We will help you create a resume step-by-step.</p>
+                </div>
+            </div>
+            <div class="col-md-6 text-center mt-5 mb- 5 border-bg">
+                <div class="div-border image-upload">
+                        <label for="file-upload">
+                            <img src="./assets/arrow_up.png" class="py-2" alt="">
+                        </label>                    
+                        <input type="file" id="file-upload" formControlName="upload"><br>
+                    <h1 class="create-resume">upload my resume</h1>
+                    <p>We'll re-format it and fill in your information so you
+                        don't have to.</p>
+                </div>
+            </div>
+        </div>
+     </form>
+        <div class="text-center mb-5">
+            <button class="form-buttons mx-3">BACK</button>
+            <button class="form-buttons mx-3" routerLink="/personal-info">NEXT</button>
+        </div>
+       
+    </div>
+</div>
+<div class="container-fluid bg-gray mb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1 class="text-white">
+                    Empower Your Resume with Our Advanced Features
+                </h1><br>
+                <p class="build-para">Our resume builder offers a variety of features to 
+                    help users create a professional and effective 
+                    resume. These include pre-written phrase 
+                    suggestions, shareable link, PDF export, 
+                    customizable templates, auto-save, spell check, 
+                    track changes, collaboration, and personal 
+                    branding resources. All these features make 
+                    creating a professional resume easy and 
+                    efficient.</p>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="./assets/build-resume.png" alt=""><br>
+            </div>
+        </div>
+    </div>
+</div>

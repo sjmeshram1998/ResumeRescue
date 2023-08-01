@@ -1,0 +1,48 @@
+.create-resume {
+    font-family: 'Ubuntu';
+font-style: normal;
+font-weight: 500;
+font-size: 22px;
+line-height: 25px;
+text-transform: uppercase;
+}
+.div-border {
+border: 2px solid #2ac6c6;
+padding: 3rem;
+border-radius: 10px;
+color: #515151;
+
+}
+.border-bg :hover{
+background-color: #1CA7AB;
+color: white;
+}
+
+.build-para {
+    font-family: 'Raleway';
+font-style: normal;
+font-weight: 400;
+font-size: 22px;
+line-height: 26px;
+color: white;
+}
+.image-upload > input
+{
+    display: none;
+}
+
+.image-upload img
+{
+    /* width: 80px; */
+    cursor: pointer;
+}
+.image-create > input
+{
+    display: none;
+}
+
+.image-create img
+{
+    /* width: 80px; */
+    cursor: pointer;
+}

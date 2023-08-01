@@ -1,0 +1,79 @@
+<div class="container-fluid mt">
+   <div class="container">
+      <div class="row mt">
+         <div class="col-md-2"></div>
+         <div class="col-md-8">
+            <br>
+            <br>         
+            <div class="row">
+               <div class="col-md-6">
+                  <p class="form-header">SKILLS <br><span class="skills-sub-title">Highlight 6-8 of your top skills.</span></p>
+               </div>
+               <div class="col-md-6" align="right">
+                  <p><i class="fa fa-light fa-eye mx-1 yellow-icon"></i> Preview</p>
+               </div>
+            </div>
+            <form class="row g-3" [formGroup]="skillsForm" (ngSubmit)="onSubmitOfskillsForm()">
+            <div class=" mt-3">
+               <div class="row">
+                  <div class="col-md-6">
+                     <label for="skill1" class="form-label">Skill</label>
+                     <input type="text" class="form-control" formControlName="skill1" id="skill1" name="skill1">
+                     <span class="text-danger" *ngIf="skill1 && skill1.invalid && skill1.touched"> Skill Required </span>
+                  </div>
+                  <div class="col-md-6">
+                     <label for="skill_level1" class="form-label">Level</label>
+                     <select class="form-select" formControlName="skill_level1" id="skill_level1" name="skill_level1">
+                        <option selected></option>
+                        <option value="level1">Level 1</option>
+                        <option value="level2">Level 2</option>
+                        <option value="level3">Level 3</option>
+                     </select>
+                     <span class="text-danger" *ngIf="skill1 && skill1.invalid && skill1.touched"> Level Required</span>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-md-6">
+                     <label for="skill2" class="form-label">Skill</label>
+                     <input type="text" class="form-control" formControlName="skill2" id="skill2" name="skill2">
+                     <span class="text-danger" *ngIf="skill2 && skill2.invalid && skill2.touched"> Skill Required </span>
+                  </div>
+                  <div class="col-md-6">
+                     <label for="skill_level2" class="form-label">Level</label>
+                     <select class="form-select" formControlName="skill_level2" id="skill_level2" name="skill_level2">
+                        <option selected></option>
+                        <option value="level1">Level 1</option>
+                        <option value="level2">Level 2</option>
+                        <option value="level3">Level 3</option>
+                     </select>
+                     <span class="text-danger" *ngIf="skill2 && skill2.invalid && skill2.touched"> Level Required</span>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-md-6">
+                     <label for="skill3" class="form-label">Skill</label>
+                     <input type="text" class="form-control" formControlName="skill3" id="skill3" name="skill3">
+                     <span class="text-danger" *ngIf="skill3 && skill3.invalid && skill3.touched"> Skill Required </span>
+                  </div>
+                  <div class="col-md-6">
+                     <label for="skill_level3" class="form-label">Level</label>
+                     <select class="form-select" formControlName="skill_level3" id="skill_level3" name="skill_level3">
+                        <option selected></option>
+                        <option value="level1">Level 1</option>
+                        <option value="level2">Level 2</option>
+                        <option value="level3">Level 3</option>
+                     </select>
+                     <span class="text-danger" *ngIf="skill3 && skill3.invalid && skill3.touched"> Level Required</span>
+                  </div>
+               </div>
+            </div>
+            <div class="text-center mt-5 mb-5">
+               <button class="form-buttons mx-3" (click)="goToSummary()">BACK</button>
+               <button class="form-buttons mx-3">NEXT</button>
+            </div>
+            </form>
+         </div>
+         <div class="col-md-2"></div>
+      </div>
+   </div>
+</div>
